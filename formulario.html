@@ -3,112 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postulación Staff - Escuadrón X</title>
-
+    <title>Formulario de Postulación</title>
     <style>
-        body { background-color: #000; color: white; font-family: Arial; }
-        h1 { text-align: center; color: #ff0000; }
-        .container {
-            max-width: 700px; margin: auto; background: #111;
-            padding: 20px; border-radius: 10px; border: 1px solid #333;
-        }
-        label { display: block; margin-top: 15px; font-weight: bold; }
-        input, textarea, select {
-            width: 100%; padding: 10px; margin-top: 5px;
-            border-radius: 5px; border: none; background: #222; color: white;
-        }
-        button {
-            margin-top: 20px; padding: 12px 20px; background: #ff0000;
-            border: none; border-radius: 5px; font-size: 16px; cursor: pointer;
-        }
-        button:hover { background: #cc0000; }
+        body { font-family: Arial; background: #111; color: #fff; padding: 20px; }
+        input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { padding: 10px 20px; background: #4CAF50; border: none; color: white; cursor: pointer; border-radius: 5px; }
+        button:hover { background: #45a049; }
+        .container { max-width: 600px; margin: auto; }
     </style>
 </head>
-
 <body>
 
-<h1>Postulación Staff - Escuadrón X</h1>
-
 <div class="container">
+    <h2>Formulario de Postulación</h2>
+
     <form id="form">
 
-        <label>1. Nombre completo</label>
-        <input type="text" id="nombre" required>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <input type="text" id="pais" placeholder="País" required>
+        <input type="text" id="discord" placeholder="Discord" required>
 
-        <label>2. Edad</label>
-        <input type="number" id="edad" required>
+        <textarea id="motivo" placeholder="¿Por qué quieres entrar?" required></textarea>
+        <textarea id="experiencia" placeholder="Experiencia previa" required></textarea>
+        <textarea id="detalle" placeholder="Detalles adicionales" required></textarea>
 
-        <label>3. País</label>
-        <input type="text" id="pais" required>
-
-        <label>4. Usuario de Discord</label>
-        <input type="text" id="discord" required>
-
-        <label>5. ¿Por qué quieres unirte al staff?</label>
-        <textarea id="motivo" required></textarea>
-
-        <label>6. ¿Qué puesto deseas?</label>
         <select id="puesto" required>
-            <option>Moderador</option>
-            <option>Soporte</option>
-            <option>Ayudante</option>
-            <option>Administrador</option>
+            <option value="">Selecciona un puesto</option>
+            <option value="Moderador">Moderador</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Soporte">Soporte</option>
         </select>
 
-        <label>7. ¿Tienes experiencia previa?</label>
-        <select id="experiencia" required>
-            <option>Sí</option>
-            <option>No</option>
-        </select>
+        <textarea id="horas" placeholder="¿Cuántas horas activas tienes?" required></textarea>
+        <textarea id="conflictos" placeholder="¿Cómo manejas conflictos?" required></textarea>
+        <textarea id="toxicos" placeholder="¿Cómo manejas usuarios tóxicos?" required></textarea>
+        <textarea id="aporte" placeholder="¿Qué aportarías al equipo?" required></textarea>
+        <textarea id="bots" placeholder="¿Sabes usar bots?" required></textarea>
+        <textarea id="fines" placeholder="¿Cuáles son tus fines en el staff?" required></textarea>
+        <textarea id="personalidad" placeholder="Describe tu personalidad" required></textarea>
+        <textarea id="motivacion" placeholder="¿Qué te motiva?" required></textarea>
+        <textarea id="injusticia" placeholder="¿Qué harías ante una injusticia?" required></textarea>
+        <textarea id="amigo" placeholder="¿Aceptarías a un amigo aunque no cumpla requisitos?" required></textarea>
+        <textarea id="resolver" placeholder="¿Cómo resolverías un problema grave?" required></textarea>
+        <textarea id="extra" placeholder="Información extra"></textarea>
 
-        <label>8. Describe tu experiencia</label>
-        <textarea id="detalle"></textarea>
-
-        <label>9. ¿Cuántas horas puedes dedicar?</label>
-        <select id="horas" required>
-            <option>1-2 horas</option>
-            <option>2-4 horas</option>
-            <option>4-6 horas</option>
-            <option>6+ horas</option>
-        </select>
-
-        <label>10. ¿Cómo manejas conflictos?</label>
-        <textarea id="conflictos" required></textarea>
-
-        <label>11. ¿Cómo reaccionas ante usuarios tóxicos?</label>
-        <textarea id="toxicos" required></textarea>
-
-        <label>12. ¿Qué aportarías al equipo?</label>
-        <textarea id="aporte" required></textarea>
-
-        <label>13. ¿Conocimientos de bots?</label>
-        <textarea id="bots"></textarea>
-
-        <label>14. ¿Disponibilidad fines de semana?</label>
-        <select id="fines" required>
-            <option>Sí</option>
-            <option>No</option>
-        </select>
-
-        <label>15. Describe tu personalidad</label>
-        <textarea id="personalidad" required></textarea>
-
-        <label>16. ¿Qué te motiva a ayudar?</label>
-        <textarea id="motivacion" required></textarea>
-
-        <label>17. ¿Cómo actuarías ante una injusticia?</label>
-        <textarea id="injusticia" required></textarea>
-
-        <label>18. ¿Qué harías si un amigo rompe reglas?</label>
-        <textarea id="amigo" required></textarea>
-
-        <label>19. ¿Qué harías si no sabes resolver algo?</label>
-        <textarea id="resolver" required></textarea>
-
-        <label>20. ¿Algo más?</label>
-        <textarea id="extra"></textarea>
-
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar Postulación</button>
     </form>
 </div>
 
@@ -118,12 +58,12 @@
 
 <script>
   const firebaseConfig = {
-    apiKey: "AIzaSyA22O0m0Z1vkHvElYmOpe4vZvrC3EsPyzU",
-    authDomain: "escuadronx.firebaseapp.com",
-    projectId: "escuadronx",
-    storageBucket: "escuadronx.firebasestorage.app",
-    messagingSenderId: "29439561906",
-    appId: "1:29439561906:web:472dba0628860609d539ab"
+    apiKey: "AIzaSyBCZH2bD5mZCiVDN1n_vFf8OqBRty_TLRE",
+    authDomain: "escuadronx-free.firebaseapp.com",
+    projectId: "escuadronx-free",
+    storageBucket: "escuadronx-free.firebasestorage.app",
+    messagingSenderId: "189437864760",
+    appId: "1:189437864760:web:da77fd49159aa34ce02fcd"
   };
 
   const app = firebase.initializeApp(firebaseConfig);
@@ -159,10 +99,13 @@ document.getElementById("form").addEventListener("submit", async function(e) {
         fecha: new Date().toLocaleString()
     };
 
-    await db.collection("postulaciones").add(data);
-
-    alert("¡Postulación enviada correctamente!");
-    document.getElementById("form").reset();
+    try {
+        await db.collection("postulaciones").add(data);
+        alert("¡Postulación enviada correctamente!");
+        document.getElementById("form").reset();
+    } catch (error) {
+        alert("Error al enviar la postulación: " + error.message);
+    }
 });
 </script>
 
